@@ -117,11 +117,12 @@ body {
   max-width: 600px;
 }
 
-.hero h1 {
-  font-size: clamp(3rem, 8vw, 5rem);
-  font-weight: 700;
-  margin-bottom: 1rem;
-  letter-spacing: -2px;
+.hero-logo {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+  display: block;
 }
 
 .hero p {
