@@ -4,80 +4,103 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shop | smellsbased</title>
-  <meta name="description" content="Shop coming soon.">
+  <meta name="description" content="Premium digital products coming soon from smellsbased.">
   <link rel="icon" type="image/png" href="../assets/smellsbased-logo.png">
   <link rel="apple-touch-icon" href="../assets/smellsbased-logo.png">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="nav">
-    <div class="nav-content">
-      <a href="../index.html" class="logo">
-        <img src="../assets/smellsbased-logo.png" alt="smellsbased">
-      </a>
-      <ul class="nav-links">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="shop.html" class="active">Shop</a></li>
-      </ul>
-    </div>
-  </nav>
+  <!-- Loading Screen -->
+  <div class="loader" id="loader">
+    <div class="loader-line"></div>
+    <span class="loader-text">Loading</span>
+  </div>
 
-  <!-- Shop Section -->
-  <section class="shop">
-    <div class="stars"></div>
-    <h1>Shop</h1>
-    <p>Check back soon for exclusive offerings.</p>
+  <!-- Star Field -->
+  <canvas id="starfield"></canvas>
 
-    <div class="shop-grid">
-      
-      <!-- Item 1 -->
-      <div class="shop-item">
-        <div class="shop-item-image">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"></circle>
-            <path d="M12 8v8M8 12h8"></path>
-          </svg>
-        </div>
-        <h3>Coming Soon</h3>
-        <p class="coming-soon">Coming Soon</p>
-        <p class="price">$1,000</p>
+  <!-- Noise Overlay -->
+  <div class="noise-overlay"></div>
+
+  <!-- Cursor Canvas -->
+  <canvas id="cursor-canvas"></canvas>
+
+  <!-- Content -->
+  <div class="content-wrapper">
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+      <div class="nav-content">
+        <a href="../index.html" class="logo" data-magnetic>
+          <img src="../assets/smellsbased-logo.png" alt="smellsbased">
+        </a>
+        <ul class="nav-links">
+          <li><a href="../index.html" data-magnetic>Home</a></li>
+          <li><a href="shop.html" class="active" data-magnetic>Shop</a></li>
+        </ul>
       </div>
+    </nav>
 
-      <!-- Item 2 -->
-      <div class="shop-item">
-        <div class="shop-item-image">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"></circle>
-            <path d="M12 8v8M8 12h8"></path>
-          </svg>
-        </div>
-        <h3>Coming Soon</h3>
-        <p class="coming-soon">Coming Soon</p>
-        <p class="price">$1,000</p>
+    <!-- Shop Hero -->
+    <section class="shop-hero">
+      <div class="section-header">
+        <span class="section-label">Exclusive Offerings</span>
+        <h1 class="section-title">The <strong>Shop</strong></h1>
       </div>
+    </section>
 
-      <!-- Item 3 -->
-      <div class="shop-item">
-        <div class="shop-item-image">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"></circle>
-            <path d="M12 8v8M8 12h8"></path>
-          </svg>
+    <!-- Shop Items -->
+    <section class="shop">
+      <div class="shop-grid">
+
+        <!-- Item 1 -->
+        <div class="shop-item" data-reveal>
+          <div class="shop-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <h3>Premium Package</h3>
+          <span class="coming-soon-badge">Coming Soon</span>
+          <p class="price"><span class="price-currency">$</span>1,000</p>
         </div>
-        <h3>Coming Soon</h3>
-        <p class="coming-soon">Coming Soon</p>
-        <p class="price">$1,000</p>
+
+        <!-- Item 2 -->
+        <div class="shop-item" data-reveal>
+          <div class="shop-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </div>
+          <h3>Elite Bundle</h3>
+          <span class="coming-soon-badge">Coming Soon</span>
+          <p class="price"><span class="price-currency">$</span>1,000</p>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="shop-item" data-reveal>
+          <div class="shop-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          </div>
+          <h3>Cosmic Edition</h3>
+          <span class="coming-soon-badge">Coming Soon</span>
+          <p class="price"><span class="price-currency">$</span>1,000</p>
+        </div>
+
       </div>
+    </section>
 
-    </div>
-  </section>
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2026 smellsbased. All rights reserved.</p>
+      <span class="footer-coords">36.1699° N, 115.1398° W</span>
+    </footer>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2026 smellsbased. All rights reserved.</p>
-  </footer>
+  </div>
 
   <script src="../js/script.js"></script>
 </body>

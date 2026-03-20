@@ -11,69 +11,126 @@
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="nav">
-    <div class="nav-content">
-      <a href="index.html" class="logo">
-        <img src="assets/smellsbased-logo.png" alt="smellsbased">
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="pages/shop.html">Shop</a></li>
-      </ul>
-    </div>
-  </nav>
+  <!-- Loading Screen -->
+  <div class="loader" id="loader">
+    <div class="loader-line"></div>
+    <span class="loader-text">Loading</span>
+  </div>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="stars"></div>
-    <div class="hero-content">
-      <img src="assets/smellsbased-logo.png" alt="smellsbased" class="hero-logo">
-      <p>Digital design and web development for local businesses.</p>
-      <a href="#portfolio" class="cta-button">See Our Work</a>
-    </div>
-  </section>
+  <!-- Star Field -->
+  <canvas id="starfield"></canvas>
 
-  <!-- Portfolio Section -->
-  <section id="portfolio" class="portfolio">
-    <h2>Portfolio</h2>
-    <div class="portfolio-grid">
-      
-      <!-- CoolCare Project -->
-      <div class="portfolio-item">
-        <div class="portfolio-image">
-          <img src="assets/coolcare-logo.png" alt="CoolCare Truck Wash">
-        </div>
-        <h3>CoolCare Truck Wash</h3>
-        <p>Built and designed a professional website for CoolCare Truck Wash, featuring service showcase, integrated Instagram reels, and customer contact forms. The site increased customer inquiries and established a strong online presence for the business.</p>
-        <a href="https://coolcaretruckwash.com" target="_blank" class="project-link">View Project →</a>
+  <!-- Noise Overlay -->
+  <div class="noise-overlay"></div>
+
+  <!-- Cursor Canvas -->
+  <canvas id="cursor-canvas"></canvas>
+
+  <!-- Content -->
+  <div class="content-wrapper">
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+      <div class="nav-content">
+        <a href="index.html" class="logo" data-magnetic>
+          <img src="assets/smellsbased-logo.png" alt="smellsbased">
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active" data-magnetic>Home</a></li>
+          <li><a href="pages/shop.html" data-magnetic>Shop</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <img src="assets/smellsbased-logo.png" alt="smellsbased" class="hero-logo">
+        <div class="hero-divider"></div>
+        <p class="hero-tagline">Digital design & web development<br>for businesses that want to stand out.</p>
+        <p class="hero-subtext">Based in Las Vegas, NV</p>
+        <a href="#portfolio" class="cta-button" data-magnetic>View Portfolio</a>
+      </div>
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee-wrap">
+      <div class="marquee">
+        <span>Web Design</span>
+        <span>Development</span>
+        <span>Branding</span>
+        <span>UI/UX</span>
+        <span>Local Business</span>
+        <span>Digital Strategy</span>
+        <span>Web Design</span>
+        <span>Development</span>
+        <span>Branding</span>
+        <span>UI/UX</span>
+        <span>Local Business</span>
+        <span>Digital Strategy</span>
+      </div>
+    </div>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+      <div class="section-header">
+        <span class="section-label">Selected Work</span>
+        <h2 class="section-title">Recent <strong>Projects</strong></h2>
       </div>
 
-      <!-- Creative Solutions Project -->
-      <div class="portfolio-item">
-        <div class="portfolio-image">
-          <img src="assets/creative-solutions-logo.png" alt="Creative Solutions Painting">
+      <div class="portfolio-grid">
+
+        <!-- CoolCare Project -->
+        <div class="portfolio-item" data-reveal>
+          <span class="portfolio-number">01</span>
+          <div class="portfolio-image">
+            <img src="assets/coolcare-logo.png" alt="CoolCare Truck Wash">
+          </div>
+          <h3>CoolCare Truck Wash</h3>
+          <p>Professional website featuring service showcase, integrated Instagram reels, and customer contact forms. Increased customer inquiries and established a strong online presence.</p>
+          <a href="https://coolcaretruckwash.com" target="_blank" class="project-link">
+            View Project <span class="arrow"></span>
+          </a>
         </div>
-        <h3>Creative Solutions Painting</h3>
-        <p>Designed and developed a high-converting website for Creative Solutions Painting, featuring before/after galleries, service descriptions, and call-to-action sections. The site showcases their work and drives client inquiries across the Outer Banks.</p>
-        <a href="https://creativesolutionpainting.com" target="_blank" class="project-link">View Project →</a>
+
+        <!-- Creative Solutions Project -->
+        <div class="portfolio-item" data-reveal>
+          <span class="portfolio-number">02</span>
+          <div class="portfolio-image">
+            <img src="assets/creative-solutions-logo.png" alt="Creative Solutions Painting">
+          </div>
+          <h3>Creative Solutions Painting</h3>
+          <p>High-converting website with before/after galleries, service descriptions, and strategic CTAs. Drives client inquiries across the Outer Banks region.</p>
+          <a href="https://creativesolutionpainting.com" target="_blank" class="project-link">
+            View Project <span class="arrow"></span>
+          </a>
+        </div>
+
       </div>
+    </section>
 
-    </div>
-  </section>
+    <!-- Divider -->
+    <div class="section-divider"></div>
 
-  <!-- CTA Section -->
-  <section class="cta">
-    <div class="stars-bg"></div>
-    <h2>Need a Website Built?</h2>
-    <p>Let's create something great for your business.</p>
-    <a href="mailto:david@smellsbased.com" class="cta-button">Email Me</a>
-  </section>
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <p class="big-text">Let's build<br>something <strong>great</strong>.</p>
+      <p class="sub-text">Ready to level up your business with a premium website?</p>
+      <a href="mailto:david@smellsbased.com" class="cta-button" data-magnetic>Get In Touch</a>
+      <p class="email-display">david@smellsbased.com</p>
+    </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2026 smellsbased. All rights reserved.</p>
-  </footer>
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2026 smellsbased. All rights reserved.</p>
+      <span class="footer-coords">36.1699° N, 115.1398° W</span>
+    </footer>
+
+  </div>
 
   <script src="js/script.js"></script>
 </body>
